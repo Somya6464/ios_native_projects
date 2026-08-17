@@ -12,8 +12,8 @@ struct ios_fastApiApp: App {
     var body: some Scene {
         WindowGroup {
 //             WelComePage()
-//            ContentView()
-            PostListScreen()
+            ContentView()
+//            PostListScreen()
         }
     }
 }

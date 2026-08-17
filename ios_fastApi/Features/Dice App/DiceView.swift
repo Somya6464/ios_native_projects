@@ -23,13 +23,13 @@ struct DiceView: View {
                 HomeView()
             }
             Tab(Constants.upcomingString, systemImage: "play.circle"){
-                Text(Constants.upcomingString)
+                UpcomingView()
             }
             Tab(Constants.searchString, systemImage: "magnifyingglass"){
                 Text(Constants.searchString)
             }
             Tab(Constants.downloadString, systemImage: "arrow.down.to.line"){
-                Text(Constants.downloadString)
+                PostListScreen()
             }
             
         }
