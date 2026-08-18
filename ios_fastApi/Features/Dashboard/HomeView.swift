@@ -27,7 +27,7 @@ struct HomeView: View {
                         } placeholder: {
                             ProgressView()
                         }
-                        .frame(width: geo.size.width, height: geo.size.height * 0.85)
+//                        .frame(width: geo.size.width, height: geo.size.height * 0.85)
                         
                         HStack {
                             Button {
@@ -52,7 +52,7 @@ struct HomeView: View {
                         HorizontalListView(header: Constants.topRatedTVString)
                     }
                 }
-            }
+            }.ignoresSafeArea()
         }
 }
 

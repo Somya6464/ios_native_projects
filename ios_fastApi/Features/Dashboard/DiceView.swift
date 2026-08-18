@@ -32,8 +32,7 @@ struct DiceView: View {
                 PostListScreen()
             }
             
-        }
-    }
+        }    }
 }
 
 #Preview {

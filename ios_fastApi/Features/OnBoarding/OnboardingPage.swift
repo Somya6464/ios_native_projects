@@ -27,7 +27,7 @@ struct OnboardingPage: View {
                             )
                         Image(.onboardingAvatar).padding(.top, 150)
                     }
-                    .frame(height: geometry.size.height * 0.7)
+                    .frame(height: geometry.size.height * 0.75)
 
                     // MARK: - Bottom Content
                     VStack(spacing: 0) {
@@ -45,23 +45,10 @@ struct OnboardingPage: View {
                             LoginScreen().onAppear{
                                 UserDefaults.standard.set(true, forKey: Constants.onboardingKey)
                             }
+
                         } label: {
                             Text("Get Started")
-                                .font(.system(size: 17, weight: .semibold))
-                                .foregroundStyle(.white)
-                                .frame(maxWidth: .infinity)
-                                .frame(height: 64)
-                                .background(
-                                    Color(red: 0.35, green: 0.65, blue: 0.63)
-                                )
-                                .clipShape(Capsule())
-                                .shadow(
-                                    color: Color.black.opacity(0.20),
-                                    radius: 18,
-                                    x: 0,
-                                    y: 10
-                                )
-                        }
+                        }.buttonStyle(AppButtonStyle())
                     }
                     .padding(.horizontal, 28)
                     .padding(.top, 40)
