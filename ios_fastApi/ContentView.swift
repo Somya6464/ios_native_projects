@@ -5,29 +5,34 @@ struct ContentView: View {
     @State private var isSplashVisible = true
     
     // 2. Track if the user is logged in (syncs with UserDefaults)
-    @AppStorage("isLoggedIn") private var isLoggedIn = false
+    @AppStorage(Constants.isLoginKey) private var isLoggedIn = false
+    @AppStorage(Constants.onboardingKey) private var onBoarded = false
 
     var body: some View {
         ZStack {
             // Apply your background gradient to the whole app
-            LinearGradient(
-                colors: [Color.gradientTop, Color.gradientBottom],
-                startPoint: .top,
-                endPoint: .bottom
-            )
-            .ignoresSafeArea()
+//            LinearGradient(
+//                colors: [Color.gradientTop, Color.gradientBottom],
+//                startPoint: .top,
+//                endPoint: .bottom
+//            )
+//            .ignoresSafeArea()
             
             // 3. Route to the correct view
             if isSplashVisible {
-                WelComePage()
+                SplashScreen()
                     .transition(.opacity)
             } else {
-                if isLoggedIn {
-                    DiceView() // Shown if the user is logged in
-                        .transition(.opacity)
-                } else {
-                    LoginScreen() // Shown if the user is NOT logged in
-                        .transition(.opacity)
+                if onBoarded{
+                    if isLoggedIn {
+                        DiceView() // Shown if the user is logged in
+                            .transition(.opacity)
+                    } else {
+                        LoginScreen() // Shown if the user is NOT logged in
+                            .transition(.opacity)
+                    }
+                }else{
+                    OnboardingPage()
                 }
             }
         }

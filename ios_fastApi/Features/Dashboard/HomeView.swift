@@ -20,7 +20,7 @@ struct HomeView: View {
                                 .overlay {
                                     LinearGradient(
                                         stops: [Gradient.Stop(color: .clear, location: 0.8),
-                                                Gradient.Stop(color: .gradient, location: 1)],
+                                                Gradient.Stop(color: .black, location: 1)],
                                         startPoint: .top,
                                         endPoint: .bottom)
                                 }

@@ -9,6 +9,10 @@ import Foundation
 import SwiftUI
 
 struct Constants{
+    // splash //
+    static let monoString = "mono"
+
+    
     static let homeString = "Home"
     static let upcomingString = "Upcoming"
     static let searchString = "Search"
@@ -23,6 +27,11 @@ struct Constants{
     static let testTitleURL = "https://image.tmdb.org/t/p/w500/nnl6OWkyPpuMm595hmAxNW3rZFn.jpg"
     static let testTitleURL2 = "https://image.tmdb.org/t/p/w500/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg"
     static let testTitleURL3 = "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg"
+
+    // Local storage key names  //
+
+    static let onboardingKey = "isUserOnboarded"
+    static let isLoginKey = "isLoggedIn"
 }
 
 

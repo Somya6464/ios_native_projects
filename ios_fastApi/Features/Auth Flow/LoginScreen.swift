@@ -61,7 +61,7 @@ struct LoginScreen: View {
                                 // 🌟 THE MAGIC LINE 🌟
                                 // ContentView is watching this key. Setting it to true
                                 // will instantly tell ContentView to swap this view for HomeView.
-                                UserDefaults.standard.set(true, forKey: "isLoggedIn")
+                                UserDefaults.standard.set(true, forKey: Constants.isLoginKey)
                             }
                         } label: {
                             Text("Login")
