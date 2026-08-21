@@ -52,8 +52,7 @@ struct HomeView: View {
                         HorizontalListView(header: Constants.topRatedTVString)
                     }
                 }
-            }.ignoresSafeArea()
-        }
+            }        }
 }
 
 #Preview {
